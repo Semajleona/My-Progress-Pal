@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>My Progress Pal</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="page-header text-center">
+            <h1>My Progress Pal</h1>
+
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        </div>
+    </header>
+
+    <main>
+        <h2> Share Updates</h2>
+        <p>Caregivers and providers share updates, progress , and milestines</p>
+        <form action="/updates" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <select name="role" required>
+                <option value="caregiver">Caregiver</option>
+                <option value="parent">Parent</option>
+                <option value="speech therapist">Speech Therapist</option>
+                <option value="occupational therapist">Occupational therapist</option>
+                <option value="physical therapist">Physical Therapist</option>
+                <option value="teacher">Teacher</option>
+                <option value="md provider">Medical Provider</option>
+                <option value="other">Other</option>
+            </select>
+
+            <input type="text" name="agency" placeholder="Agency/Organization">
+            <input type="date" name="date" required>
+            <textarea name="message" placeholder="Enter updates" required></textarea>
+            <button type="submit">SUBMIT UPDATE</button>
+        </form>
+        <h3>Communication Log</h3>
+
+
+        <ul class="messages">
+            <% updates.forEach(function(item){ %>
+                <li class="message">
+
+
+                    <h4>
+                        <%= item.name %> - <%= item.role %> - <%= item.date %>
+
+                    </h4>
+                    <p> Agency: <%= item.agency %>
+                    </p>
+
+                    <p>
+                        <%= item.date %>
+                    </p>
+
+                    <p>
+                        <%= item.message %>
+                    </p>
+
+                    <% if (String(item.userId)===String(user._id)){ %>
+                        <details> <!--This hides the editing form -->
+                            <summary>Edit</summary> <!--This  allows the label to be clicked -->
+                            <form action="/updates/edit" method="POST">
+                                <input type="hidden" name="id" value="<%= item._id %>">
+                                <textarea name="message"><%= item.message %></textarea>
+
+                                <button type="submit">Save Changes</button>
+                            </form>
+                        </details>
+
+                        <form action="/updates/delete" method="POST">
+                            <input type="hidden" name="id" value="<%= item._id %>">
+
+                            <button type="submit">Delete</button>
+                        </form>
+                        <% } %>
+                </li>
+                <% }) %>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

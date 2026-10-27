@@ -1,0 +1,124 @@
+body {
+  text-align: center;
+  background-color: rgb(124, 106, 141);
+  padding-top: 80px;
+  word-wrap: break-word;
+}
+
+img {
+  height: 270px;
+  width: 400px
+}
+
+h1 {
+  color: black;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+
+.emtionsOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  flex-wrap: wrap;
+
+
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2,
+h3 {
+  color: #8509aa;
+}
+
+
+main {
+  width: 80%;
+  margin: 30px auto;
+}
+
+
+form {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+/* TEXT AREA */
+textarea {
+  height: 100px;
+}
+
+
+button {
+  background-color: #8509aa;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+.messages {
+  list-style: none;
+  padding: 0;
+}
+
+
+.message {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+
+.message h4 {
+  color: #8509aa;
+}
+
+
+details {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+summary {
+  color: #8509aa;
+  cursor: pointer;
+}
+
+
+header a {
+  background-color: white;
+  color: #8509aa;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
