@@ -1,5 +1,9 @@
 {
   "name": "node-authentication",
+
+
+  "engines": {
+  "node": "20.x"
   "main": "server.js",
   "dependencies": {
     "bcrypt": "*",
