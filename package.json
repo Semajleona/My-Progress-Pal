@@ -3,8 +3,13 @@
 
 
   "engines": {
-  "node": "20.x"
+  "node": "20.x"},
+  
   "main": "server.js",
+ "scripts": {
+    "start": "node server.js"},
+
+  
   "dependencies": {
     "bcrypt": "*",
     "bcrypt-nodejs": "^0.0.3",
