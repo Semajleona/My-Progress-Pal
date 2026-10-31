@@ -63,7 +63,11 @@ module.exports = function (app, passport, db) {
       (err, result) => {
         if (err) return console.log(err)
 
-        res.redirect('/profile')
+        
+      res.render('profile.ejs', {
+        user: req.user,
+        updates: updates
+      })
       })
   })
 
