@@ -52,37 +52,41 @@ module.exports = function (app, passport, db) {
       })
   })
 
-  app.post('/updates/edit', isLoggedIn, (req, res) => {
-    db.collection('updates').findOneAndUpdate({
+  
+app.post('/updates/edit', isLoggedIn, (req, res) => {
+  db.collection('updates').findOneAndUpdate(
+    {
       _id: ObjectID(req.body.id),
       userId: req.user._id
     },
-      {
-        $set: { message: req.body.message }
-      },
-      (err, result) => {
-        if (err) return console.log(err)
+    {
+      $set: { message: req.body.message }
+    },
+    (err, result) => {
+      if (err) return console.log(err)
 
-        
-      res.render('profile.ejs', {
-        user: req.user,
-        updates: updates
-      })
-      })
-  })
+      
+      res.redirect('/profile')
+    }
+  )
+})
 
-  app.post('/updates/delete', isLoggedIn, (req, res) => {
-    db.collection('updates').findOneAndDelete({
+
+
+app.post('/updates/delete', isLoggedIn, (req, res) => {
+  db.collection('updates').findOneAndDelete(
+    {
       _id: ObjectID(req.body.id),
       userId: req.user._id
     },
+    (err, result) => {
+      if (err) return console.log(err)
 
-      (err, result) => {
-        if (err) return console.log(err)
-        alert('Message has been updated successfully')
-        res.redirect('/profile')
-      })
-  })
+      console.log('Update deleted successfully')
+      res.redirect('/profile')
+    }
+  )
+})
 
 
 
