@@ -1,59 +1,60 @@
 <img width="1536" height="1024" alt="My Progress Pal Communication Log" src="https://github.com/user-attachments/assets/4970183a-c5cd-4426-a0e9-4f30171e81f9" />
+
 https://my-progress-pal-1.onrender.com
-My Progress Pal 💜
 
-A Therapy & Caregiver Communication Log
+# 💜 My Progress Pal
+### A Therapy & Caregiver Communication Log
 
-Project Overview
 
-My Progress Pal is a full-stack web application designed to foster effective communication between a child's therapists, caregivers, parents, and other support professionals.
 
-Children with developmental disabilities often receive services from multiple providers, making consistent communication essential. My Progress Pal creates a shared space where caregivers and professionals can document updates, track progress, celebrate milestones, and share important information about a child's development.
+## Project Description
 
-The goal is to encourage collaboration, improve continuity of care, and help everyone involved in supporting a child stay informed and connected.
+My Progress Pal is a full-stack web application designed to improve communication between caregivers, therapists, parents, and support professionals working with children with developmental disabilities.
 
-Purpose
+The application provides a centralized space where users can share updates, document developmental milestones, and stay informed about a child's progress to encourage collaboration and continuity of care.
 
-My Progress Pal was created to address the need for better communication between the individuals involved in a child's care.
+## Tech Stack
 
-The application aims to:
+- **Frontend:** HTML5, CSS3, JavaScript, EJS, Bootstrap
+- **Backend:** Node.js, Express.js, Passport.js, Body-parser
+- **Database:** MongoDB, Mongoose
 
-Encourage communication between caregivers, therapists, and support professionals.
+## What I Learned
 
-Provide a centralized location for sharing updates.
+- Building a full-stack application using Node.js and Express.js
+- Implementing user authentication with Passport.js
+- Creating dynamic pages using EJS templates
+- Handling form submissions and HTTP requests with Express.js
+- Connecting MongoDB to store and retrieve communication logs
+- Organizing user-generated information in a database
+- Designing user-friendly interfaces that support communication and collaboration
 
-Help caregivers and providers document progress and developmental milestones.
+## How to Run Locally
 
-Promote collaboration between families and professionals.
+1. Clone the repository:
 
-Support more consistent and individualized care for children with developmental disabilities.
+   ```bash
+   git clone YOUR_REPOSITORY_URL
+   ```
 
-Tech Stack
+2. Navigate into the project folder:
 
-Frontend
+   ```bash
+   cd YOUR_PROJECT_FOLDER
+   ```
 
-HTML5 — Structures the application's pages and forms.
+3. Install dependencies:
 
-CSS3 — Styles the application and creates a clean, user-friendly interface.
+   ```bash
+   npm install
+   ```
 
-JavaScript — Supports frontend functionality.
+4. Configure your environment variables in a `.env` file with your MongoDB connection string and any required authentication settings.
 
-EJS — Dynamically displays communication log entries retrieved from the database.
+5. Start the application:
 
-Bootstrap — Provides additional styling and layout components.
+   ```bash
+   npm start
+   ```
 
-Backend
-
-Node.js — JavaScript runtime environment.
-
-Express.js — Manages server routes and HTTP requests.
-
-Passport.js — Handles user authentication.
-
-Body-parser — Processes submitted form data.
-
-Database
-
-MongoDB — Stores communication logs and user information.
-
-Mongoose — Supports database connections and data modeling.
+6. Open your browser and navigate to the local port configured for the application (for example, `http://localhost:8080`).
